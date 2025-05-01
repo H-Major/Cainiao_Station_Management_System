@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PackageForm</class>
+ <widget class="QWidget" name="PackageForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>PingFang SC</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Package Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>530</y>
+     <width>231</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_create">
+      <property name="text">
+       <string>添加包裹</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_update">
+      <property name="text">
+       <string>修改信息</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_random">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>20</y>
+     <width>111</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>随机生成数据</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>包裹管理</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>481</width>
+     <height>456</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lb_id">
+        <property name="text">
+         <string>包裹编号</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="line_id"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btn_delete_id">
+        <property name="font">
+         <font>
+          <family>PingFang SC</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>删除包裹</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lb_userPhone">
+        <property name="text">
+         <string>手机号</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="line_userPhone">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btn_delete_phone">
+        <property name="font">
+         <font>
+          <family>PingFang SC</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>删除包裹</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lb_company">
+        <property name="text">
+         <string>快递公司</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="line_company"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lb_expressNum">
+        <property name="text">
+         <string>快递单号</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="line_expressNum"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lb_packageName">
+        <property name="text">
+         <string>包裹名字</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="line_packageName"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lb_information">
+        <property name="text">
+         <string>包裹备注</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="line_information"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lb_sendName">
+        <property name="text">
+         <string>发件人</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="line_sendName"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lb_sendAddress">
+        <property name="text">
+         <string>发件地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="line_sendAddress"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lb_receiveName">
+        <property name="text">
+         <string>收件人</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="line_receiveName"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lb_receiveAddress">
+        <property name="text">
+         <string>收件地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="line_receiveAddress"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="lb_code">
+        <property name="text">
+         <string>取件码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="line_code"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="lb_packageStatus">
+        <property name="text">
+         <string>入库状态</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QComboBox" name="combo_packageStatus">
+        <property name="font">
+         <font>
+          <family>PingFang SC</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>待入库</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>待取件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>已取件</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

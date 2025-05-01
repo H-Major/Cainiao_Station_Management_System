@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1140</width>
+    <height>748</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>PingFang SC</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>菜鸟驿站管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="table">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>20</y>
+      <width>771</width>
+      <height>651</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>85</y>
+      <width>301</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout1">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lb_host">
+       <property name="text">
+        <string>host：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="line_host">
+       <property name="text">
+        <string>host</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lb_port">
+       <property name="text">
+        <string>port:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="line_port">
+       <property name="text">
+        <string>port</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lb_database">
+       <property name="text">
+        <string>database:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="line_database">
+       <property name="text">
+        <string>database</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lb_user">
+       <property name="text">
+        <string>user:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="line_user">
+       <property name="text">
+        <string>user</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lb_password">
+       <property name="text">
+        <string>password:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="line_password">
+       <property name="font">
+        <font>
+         <family>PingFang SC</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>password</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lb_status">
+       <property name="text">
+        <string> [未连接]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btn_connect">
+         <property name="text">
+          <string>登录数据库</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_disconnect">
+         <property name="text">
+          <string>断开连接</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="lb_title">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>221</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>菜鸟驿站管理系统</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_title_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>数据库连接</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_title_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>数据查询</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>315</y>
+      <width>301</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lb_userPhone">
+         <property name="text">
+          <string>手机号:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="line_userPhone">
+         <property name="text">
+          <string>10012341234</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lb_code">
+         <property name="text">
+          <string>取件码:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="line_code">
+         <property name="text">
+          <string>16-4-2017</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lb_id">
+         <property name="text">
+          <string>包裹编号:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="line_id">
+         <property name="text">
+          <string>91234567890123456789</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lb_expressNum">
+         <property name="text">
+          <string>快递单号：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="line_expressNum">
+         <property name="text">
+          <string>SF2348901234567</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lb_company">
+         <property name="text">
+          <string>快递公司：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="line_company">
+         <property name="text">
+          <string>顺丰快递</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lb_packageStatus">
+         <property name="text">
+          <string>入库状态：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="combo_packageStatus">
+         <item>
+          <property name="text">
+           <string>全部状态</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>待入库</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>待取件</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>已取件</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QCheckBox" name="check_range">
+         <property name="text">
+          <string>查询区间:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_begin">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>PingFang SC</family>
+           <pointsize>18</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>~</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_end">
+         <property name="text">
+          <string>10000</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="check_have_package">
+         <property name="text">
+          <string>只看有包裹</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_select_user">
+         <property name="text">
+          <string>查询用户</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_select_package">
+         <property name="text">
+          <string>查询包裹</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="lb_title_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>615</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>快速取件</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>640</y>
+      <width>301</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="lb_code_2">
+       <property name="text">
+        <string>取件码:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="line_code_out">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_out">
+       <property name="text">
+        <string>取件</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_up">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>517</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_down">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>531</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1140</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_view">
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>视图设置</string>
+    </property>
+    <addaction name="ac_userName"/>
+    <addaction name="ac_packageName"/>
+    <addaction name="ac_company"/>
+    <addaction name="ac_expressNum"/>
+    <addaction name="ac_information"/>
+    <addaction name="ac_sendName"/>
+    <addaction name="ac_sendAddress"/>
+    <addaction name="ac_receiveName"/>
+    <addaction name="ac_receiveAddress"/>
+    <addaction name="ac_putDate"/>
+    <addaction name="separator"/>
+    <addaction name="action_check_all"/>
+   </widget>
+   <widget class="QMenu" name="menu_input_file">
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>批量导入</string>
+    </property>
+    <addaction name="action_sql"/>
+    <addaction name="separator"/>
+    <addaction name="action_ran_gen_package"/>
+    <addaction name="action_ran_gen_user"/>
+   </widget>
+   <widget class="QMenu" name="menu_manage">
+    <property name="title">
+     <string>数据管理</string>
+    </property>
+    <addaction name="action_manage_user"/>
+    <addaction name="action_manage_package"/>
+    <addaction name="separator"/>
+    <addaction name="action_delete_out"/>
+    <addaction name="separator"/>
+    <addaction name="action_delete_all"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>PingFang SC</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>数据统计</string>
+    </property>
+    <addaction name="action_count_user"/>
+    <addaction name="action_count_package"/>
+    <addaction name="separator"/>
+    <addaction name="action_count_shelf"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>权限管理</string>
+    </property>
+    <addaction name="action_manage_admin"/>
+    <addaction name="action_manage_grant"/>
+   </widget>
+   <addaction name="menu_view"/>
+   <addaction name="menu"/>
+   <addaction name="menu_manage"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_input_file"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="ac_userName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>用户名</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_userPhone">
+   <property name="text">
+    <string>手机号</string>
+   </property>
+  </action>
+  <action name="ac_company">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>快递公司</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_expressNum">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>快递单号</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_packageName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>包裹名称</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_information">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>包裹信息</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_sendName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>发件人</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_sendAddress">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>发件地址</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_receiveAddress">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>收件地址</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_receiveName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>收件人</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="ac_putDate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>入库日期</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_manage_user">
+   <property name="text">
+    <string>用户信息管理</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_manage_package">
+   <property name="text">
+    <string>包裹信息管理</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_sql">
+   <property name="text">
+    <string>导入SQL语句文件</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_count_shelf">
+   <property name="text">
+    <string>货架包裹统计</string>
+   </property>
+  </action>
+  <action name="action_check_all">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>全选</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_ran_gen_package">
+   <property name="text">
+    <string>随机生成包裹</string>
+   </property>
+  </action>
+  <action name="action_manage_admin">
+   <property name="text">
+    <string>创建与维护管理员</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_manage_grant">
+   <property name="text">
+    <string>授权与收权</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_count_package">
+   <property name="text">
+    <string>包裹总数统计</string>
+   </property>
+  </action>
+  <action name="action_count_user">
+   <property name="text">
+    <string>用户总数统计</string>
+   </property>
+  </action>
+  <action name="action_ran_gen_user">
+   <property name="text">
+    <string>随机生成用户</string>
+   </property>
+  </action>
+  <action name="action_delete_all">
+   <property name="text">
+    <string>清空数据</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_delete_out">
+   <property name="text">
+    <string>移除已取件的包裹</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>PingFang SC</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
