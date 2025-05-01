@@ -1,0 +1,2 @@
+# Cainiao_Station_Management_System
+基于华为OpenGauss数据库、PyQt5图形框架的菜鸟驿站管理系统
